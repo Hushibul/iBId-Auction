@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"); */
+
+body {
+  /* font-family: "Montserrat", Helvetica, Arial, sans-serif; */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.brand-logo {
+  background: linear-gradient(
+        to top left,
+        transparent 51%,
+        rgba(255, 0, 0, 0) 30%,
+        #f7f7f7 48%,
+        #fff 58.5%
+      )
+      no-repeat,
+    linear-gradient(to top left, transparent 0.1%, #fff 0.1%) no-repeat;
+  background-size: 45% 172%, 68% 112%;
+  background-position: 93% 0%, 0% 0%;
+  padding: 58px 58px;
+  margin: 0px;
+}
+
+.navbar-default {
+  margin-left: -65px;
+}
