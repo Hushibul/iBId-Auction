@@ -13,37 +13,49 @@
   </head>
   <body>
     <!-- Navbar  -->
-    <header class="flex bg-blue shadow-sm shadow-slate-100">
-      <div class="brand-logo z-50">
-        <a href="#home">
-          <img
-            class="max-w-[85px] mr-2"
-            src="./img/logos/BrandLogo.png"
-            alt=""
-          />
-        </a>
-      </div>
-      <nav class="w-full">
-        <div class="top-header flex items-center justify-between ml-10">
-          <div class="inline-block">
-            <span class="text-white text-light py-4">Call us toll free: </span>
-            <a class="py-4" href="#phone">
-              <span class="text-white font-semibold">+1-541-754-3010</span>
-            </a>
-            <span class="text-white text-light ml-6 py-4"
-              >Send us an email</span
+    <header class="flex flex-col shadow-sm shadow-slate-300">
+      <div
+        class="top-header flex flex-col py-2 lg:py-0 lg:flex-row items-center justify-center md:justify-between lg:pl-60 bg-blue lg:pr-20"
+      >
+        <div class="flex gap-4 justify-center items-center">
+          <a class="flex items-center lg:flex-col xl:flex-row" href="#phone">
+            <span class="text-white md:hidden"
+              ><i class="fa fa-phone" aria-hidden="true"></i
+            ></span>
+            <span class="text-white text-sm hidden md:block"
+              >Call us toll free:</span
             >
-            <a class="py-4" href="#email">
-              <span class="text-white font-semibold">contact@gmail.com</span>
+            <strong class="font-semibold text-sm text-white hidden md:block"
+              >+1-541-754-3010</strong
+            >
+          </a>
+          <a class="flex items-center lg:flex-col xl:flex-row" href="#email">
+            <span class="text-white md:hidden"
+              ><i class="fa fa-envelope-o" aria-hidden="true"></i
+            ></span>
+            <span class="text-white text-sm hidden md:block"
+              >Send us an email:</span
+            >
+            <strong class="font-semibold text-sm text-white hidden md:block"
+              >contact@example.com
+            </strong>
+          </a>
+        </div>
+
+        <div class="hidden md:flex items-center justify-center gap-4">
+          <div class="flex gap-4 items-center">
+            <a href="#order-track">
+              <span class="text-white text-sm font-semibold"
+                ><i class="fa fa-truck mr-2" aria-hidden="true"></i>Order
+                Track</span
+              >
+            </a>
+            <a href="#sign-in">
+              <span class="text-white text-sm font-semibold">Sign In</span>
             </a>
           </div>
-          <div class="flex space-x-4 mr-32">
-            <a class="text-white font-semibold py-4" href="#order-track">
-              <i class="fa fa-truck" aria-hidden="true"></i>
-              <span>Order Track</span>
-            </a>
-            <a class="text-white font-semibold py-4" href="#sign-in">Sign In</a>
 
+          <div class="flex items-center gap-4">
             <div class="group relative py-4">
               <span
                 class="text-white font-semibold inline-block cursor-pointer border-r pr-3 border-white"
@@ -59,53 +71,123 @@
               </div>
             </div>
 
-            <div class="group relative">
+            <div class="group relative py-4">
               <span
-                class="text-white font-semibold inline-block cursor-pointer py-4"
-                >USA <i class="fa fa-angle-down" aria-hidden="true"></i
+                class="text-white font-semibold inline-block cursor-pointer pr-3"
+                >USD <i class="fa fa-angle-down" aria-hidden="true"></i
               ></span>
 
               <div
-                class="hidden opacity-0 absolute px-4 py-2 top-12 left-0 bg-white group-hover:flex flex-col group-hover:opacity-100 shadow-sm shadow-slate-400 duration-200 rounded"
+                class="hidden opacity-0 absolute px-4 py-2 top-12 left-0 bg-white group-hover:flex flex-col group-hover:opacity-100 shadow-sm shadow-slate-400 duration-200 rounded z-50"
               >
-                <a class="font-semibold text-gray py-1" href="#usa">USA</a>
+                <a class="font-semibold text-gray py-1" href="#usd">USD</a>
                 <a class="font-semibold text-gray py-1" href="#eur">EUR</a>
                 <a class="font-semibold text-gray py-1" href="#jpy">JPY</a>
               </div>
             </div>
           </div>
         </div>
+      </div>
 
-        <div class="navbar-default bg-white h-[93px]">
-          <div class="flex items-center justify-between pt-8">
-            <ul class="flex ml-[86px] items-center">
-              <li><a class="px-4" href="#home">Home</a></li>
-              <li><a class="px-4" href="#browse-ntfs">Browse NTFs</a></li>
+      <nav class="flex items-center bg-white">
+        <div class="w-full hidden md:block">
+          <div
+            class="brand-logo hidden md:block md:w-full lg:w-[224px] h-[148px] lg:absolute inset-0"
+          >
+            <a href="#home">
+              <img
+                class="max-w-[85px] mx-auto"
+                src="./img/logos/BrandLogo.png"
+                alt="Brand Logo"
+              />
+            </a>
+          </div>
+          <div class="hidden pl-4 md:flex lg:pl-60 items-center">
+            <ul class="flex gap-8 items-center min-h-[100px] flex-wrap">
+              <li><a class="font-semibold text-gray" href="#home">Home</a></li>
               <li>
-                <a class="px-4" href="#nft-marketplace">NFT Marketplace</a>
+                <a class="font-semibold text-gray" href="#browse-ntfs"
+                  >Browse NTFs</a
+                >
               </li>
-              <li><a class="px-4" href="#about">About</a></li>
-              <li><a class="px-4" href="#blog">Blog</a></li>
-              <li><a class="px-4" href="#faq">FAQ</a></li>
+              <li>
+                <a class="font-semibold text-gray" href="#nft-marketplace"
+                  >NFT Marketplace</a
+                >
+              </li>
+              <li>
+                <a class="font-semibold text-gray" href="#about">About</a>
+              </li>
+              <li><a class="font-semibold text-gray" href="#blog">Blog</a></li>
+              <li><a class="font-semibold text-gray" href="#faq">FAQ</a></li>
             </ul>
 
-            <div class="mr-20">
-              <select
-                class="category-select px-8 py-2 rounded-tl-full rounded-bl-full shadow-sm shadow-slate-300 focus-within:bg-white text-gray focus-within:outline-none"
-                name=""
-                id=""
-              >
-                <option class="font-bold hover:bg-slate-300" selected>
-                  Category
-                </option>
-                <option value="art">Art</option>
-                <option value="domain">Domain</option>
-                <option value="sports">Sports</option>
-                <option value="trading-cards">Trading Cards</option>
-                <option value="utility">Utility</option>
-                <option value="virtual-worlds">Virtual Worlds</option>
-              </select>
+            <div class="flex items-center gap-4 ml-auto flex-wrap mr-20">
+              <div class="flex items-center">
+                <div
+                  class="category-select border relative gap-1 border-slate-300 cursor-pointer rounded-tl-full rounded-bl-full px-6 py-2 group"
+                >
+                  <span class="text-sm text-gray">Category</span>
+
+                  <i class="fa fa-angle-down" aria-hidden="true"></i>
+                </div>
+
+                <div
+                  class="search-box relative border border-l-0 border-r-0 rounded-r-full border-slate-300 cursor-pointer"
+                >
+                  <input
+                    class="focus-within:outline-none text-gray text-light px-4 py-2 placeholder:text-sm"
+                    type="text"
+                    placeholder="Search Products..."
+                  />
+
+                  <button
+                    class="bg-gray hover:bg-blue absolute w-10 h-10 top-0 right-0 rounded-full flex items-center justify-center duration-150"
+                  >
+                    <i class="fa fa-search text-white" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+
+              <button>
+                <i class="fa fa-heart-o" aria-hidden="true"></i>
+              </button>
+
+              <button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+              </button>
             </div>
+          </div>
+        </div>
+
+        <!-- Mobile Nav -->
+        <div
+          class="mobile w-full flex md:hidden items-center justify-between px-2 h-[75px]"
+        >
+          <div class="">
+            <a href="#home"
+              ><img
+                class="max-w-[85px]"
+                src="./img/logos/BrandLogo.png"
+                alt="BrandLogo"
+            /></a>
+          </div>
+          <div class="flex items-center gap-4">
+            <button class="">
+              <i class="fa fa-user" aria-hidden="true"></i>
+            </button>
+            <button class="">
+              <i class="fa fa-heart" aria-hidden="true"></i>
+            </button>
+            <button class="">
+              <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+            </button>
+            <button class="">
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+            <button class="">
+              <i class="fa fa-bars" aria-hidden="true"></i>
+            </button>
           </div>
         </div>
       </nav>
@@ -113,6 +195,44 @@
 
     <main></main>
 
-    <footer></footer>
+    <footer class="pt-20 pb-16">
+      <div
+        class="bg-blue flex flex-col lg:flex-row justify-between items-center px-4 py-5 w-full"
+      >
+        <p class="text-lg hidden sm:block font-bold mr-auto text-white">
+          Browse through our products library!
+        </p>
+        <div
+          class="search-box relative overflow-hidden rounded-full w-full bg-white border-slate-300 cursor-pointer"
+        >
+          <input
+            class="focus-within:outline-none text-gray text-light px-8 py-2 placeholder:text-sm"
+            type="text"
+            placeholder="Search Products..."
+          />
+
+          <button
+            class="bg-gray hover:bg-blue absolute w-10 h-10 top-0 right-0 rounded-full flex items-center justify-center duration-150"
+          >
+            <i class="fa fa-search text-white" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-12">
+        <div class="col-span-4">
+          <img
+            class="w-[105px]"
+            src="./img/logos/BrandLogoFooter.png"
+            alt="Brand Logo"
+          />
+          <p class="text-lightGray">contact@gmail.com</p>
+          <p class="text-lightGray">+1-541-754-3010</p>
+        </div>
+        <div class="col-span-4"></div>
+        <div class="col-span-4"></div>
+        <div class="col-span-4"></div>
+      </div>
+    </footer>
   </body>
 </html>
