@@ -10,6 +10,7 @@ module.exports = {
         red: "#f02222",
         gray: "#334141",
         lightGray: "#777",
+        wheat: "#f8f8f8",
       },
       screens: {
         xs: "320px",

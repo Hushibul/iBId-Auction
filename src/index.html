@@ -102,7 +102,9 @@
               />
             </a>
           </div>
-          <div class="hidden pl-4 md:flex lg:pl-60 items-center">
+          <div
+            class="hidden pl-4 md:flex md:flex-col w-full lg:flex-row lg:pl-60 items-center"
+          >
             <ul class="flex gap-8 items-center min-h-[100px] flex-wrap">
               <li><a class="font-semibold text-gray" href="#home">Home</a></li>
               <li>
@@ -122,18 +124,22 @@
               <li><a class="font-semibold text-gray" href="#faq">FAQ</a></li>
             </ul>
 
-            <div class="flex items-center gap-4 ml-auto flex-wrap mr-20">
-              <div class="flex items-center">
+            <div
+              class="flex items-center md:w-full md:mb-8 lg:mb-0 lg:w-auto gap-4 ml-auto flex-wrap lg:mr-20"
+            >
+              <div class="flex items-center md:w-full lg:w-fit">
                 <div
-                  class="category-select border relative gap-1 border-slate-300 cursor-pointer rounded-tl-full rounded-bl-full px-6 py-2 group"
+                  class="category-select flex items-center border relative gap-1 border-slate-300 cursor-pointer rounded-tl-full rounded-bl-full px-6 group"
                 >
-                  <span class="text-sm text-gray">Category</span>
+                  <span class="text-sm inline-block py-2.5 mr-2 text-gray"
+                    >Category</span
+                  >
 
                   <i class="fa fa-angle-down" aria-hidden="true"></i>
                 </div>
 
                 <div
-                  class="search-box relative border border-l-0 border-r-0 rounded-r-full border-slate-300 cursor-pointer"
+                  class="search-box relative border md:w-3/4 border-l-0 border-r-0 rounded-r-full border-slate-300 cursor-pointer"
                 >
                   <input
                     class="focus-within:outline-none text-gray text-light px-4 py-2 placeholder:text-sm"
@@ -149,11 +155,11 @@
                 </div>
               </div>
 
-              <button>
+              <button class="hidden lg:block">
                 <i class="fa fa-heart-o" aria-hidden="true"></i>
               </button>
 
-              <button>
+              <button class="hidden lg:block">
                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
               </button>
             </div>
@@ -193,17 +199,124 @@
       </nav>
     </header>
 
-    <main></main>
+    <!-- Main Content  -->
+    <main>
+      <!-- Hero Section  -->
+      <!-- <section class="flex flex-col w-full sm:flex-row h-screen">
+        <div class="w-full sm:w-1/2 px-4 py-16">
+          <h1
+            class="text-xl sm:text-3xl md:text-[44px] md:leading-[44px] font-bold text-black"
+          >
+            The best NFT Marketplace for your needs
+          </h1>
+        </div>
+        <div class="relative bg-red w-full sm:w-1/2 img-group">
+          <div
+            class="absolute w-1/2 h-4/5 rounded-bl-full rounded-br-full overflow-hidden"
+          >
+            <img src="./img/bg/nft-bg-3.jpg" alt="" />
+          </div>
+        </div>
+      </section> -->
 
-    <footer class="pt-20 pb-16">
+      <!-- Gallery section  -->
+      <section class="gallery flex w-full items-start">
+        <div class="w-1/5 bg-yellow-300 hidden lg:block"></div>
+        <div class="w-full lg:w-4/5 bg-green-400 grid grid-cols-12">
+          <ul
+            id="gallery-menu"
+            class="w-full col-span-12 flex flex-col md:flex-row items-center justify-center flex-wrap gap-6"
+          >
+            <li onclick="toggleList()" id="list-one">
+              <a
+                class="text-neutral-800 font-semibold text-sm uppercase"
+                data-type="all"
+                href="#all"
+                >All</a
+              >
+            </li>
+            <li class="menu-list hidden md:block">
+              <a
+                class="text-neutral-800 font-semibold text-sm uppercase"
+                data-type="art"
+                href="#art"
+                >Art</a
+              >
+            </li>
+            <li class="menu-list hidden md:block">
+              <a
+                class="text-neutral-800 font-semibold text-sm uppercase"
+                href="#domain"
+                data-type="domain"
+                >Domain</a
+              >
+            </li>
+            <li class="menu-list hidden md:block">
+              <a
+                class="text-neutral-800 font-semibold text-sm uppercase"
+                href="#sports"
+                data-type="sports"
+                >Sports</a
+              >
+            </li>
+            <li class="menu-list hidden md:block">
+              <a
+                class="text-neutral-800 font-semibold text-sm uppercase"
+                href="#trading-cards"
+                data-type="trading-cards"
+                >Trading Cards</a
+              >
+            </li>
+            <li class="menu-list hidden md:block">
+              <a
+                class="text-neutral-800 font-semibold text-sm uppercase"
+                href="#utility"
+                data-type="utility"
+                >Utility</a
+              >
+            </li>
+            <li class="menu-list hidden md:block">
+              <a
+                class="text-neutral-800 font-semibold text-sm uppercase"
+                href="#virtual-worlds"
+                data-type="virtual-worlds"
+                >Virtual Worlds</a
+              >
+            </li>
+          </ul>
+
+          <div
+            class="col-span-12 sm:col-span-6 md:col-span-4 xl:col-span-3 flex flex-col justify-center items-center bg-white pb-8 mx-2 shadow shadow-slate-300"
+          >
+            <img class="w-full" src="./img/bg/cardTwo.jpg" alt="card" />
+            <h3 class="text-xl font-bold text-gray">Eternity #02</h3>
+            <p class="text-sm font-bold text-blue">$45.00</p>
+            <button
+              class="px-4 py-2 uppercase text-sm font-bold bg-blue rounded-full text-white"
+            >
+              Buy on opensea.io
+            </button>
+          </div>
+          <div
+            class="col-span-12 sm:col-span-6 md:col-span-4 xl:col-span-3 bg-sky-500 mx-2"
+          ></div>
+          <div
+            class="col-span-12 sm:col-span-6 md:col-span-4 xl:col-span-3 bg-sky-500 mx-2"
+          ></div>
+          <div
+            class="col-span-12 sm:col-span-6 md:col-span-4 xl:col-span-3 bg-sky-500 mx-2"
+          ></div>
+        </div>
+      </section>
+
       <div
-        class="bg-blue flex flex-col lg:flex-row justify-between items-center px-4 py-5 w-full"
+        class="bg-blue flex flex-col gap-3 lg:flex-row justify-between items-center px-4 py-5 w-full"
       >
         <p class="text-lg hidden sm:block font-bold mr-auto text-white">
           Browse through our products library!
         </p>
         <div
-          class="search-box relative overflow-hidden rounded-full w-full bg-white border-slate-300 cursor-pointer"
+          class="search-box relative overflow-hidden rounded-full w-full lg:w-96 bg-white border-slate-300 cursor-pointer"
         >
           <input
             class="focus-within:outline-none text-gray text-light px-8 py-2 placeholder:text-sm"
@@ -218,21 +331,102 @@
           </button>
         </div>
       </div>
+    </main>
 
-      <div class="grid grid-cols-12">
-        <div class="col-span-4">
+    <!-- Footer  -->
+    <footer>
+      <div class="grid grid-cols-12 py-16 px-8">
+        <div class="col-span-12 md:col-span-6 lg:col-span-3 md:px-4 mt-4">
           <img
             class="w-[105px]"
             src="./img/logos/BrandLogoFooter.png"
             alt="Brand Logo"
           />
-          <p class="text-lightGray">contact@gmail.com</p>
-          <p class="text-lightGray">+1-541-754-3010</p>
+          <p class="text-lightGray py-1">contact@gmail.com</p>
+          <p class="text-lightGray py-1">+1-541-754-3010</p>
+          <div class="flex items-center gap-5">
+            <button>
+              <i class="fa fa-facebook-square text-blue" aria-hidden="true"></i>
+            </button>
+            <button>
+              <i class="fa fa-twitter text-blue" aria-hidden="true"></i>
+            </button>
+            <button>
+              <i class="fa fa-linkedin-square text-blue" aria-hidden="true"></i>
+            </button>
+            <button>
+              <i class="fa fa-instagram text-blue" aria-hidden="true"></i>
+            </button>
+            <button>
+              <i class="fa fa-telegram text-blue" aria-hidden="true"></i>
+            </button>
+          </div>
         </div>
-        <div class="col-span-4"></div>
-        <div class="col-span-4"></div>
-        <div class="col-span-4"></div>
+        <div class="col-span-12 md:col-span-6 lg:col-span-3 md:px-4 mt-4">
+          <h3 class="text-gray text-2xl font-bold mb-5">Useful Links</h3>
+          <ul class="menu-links ml-1">
+            <li class="relative">
+              <a class="text-neutral-400 text-sm ml-4" href="#mobile"
+                >Mobile Phone</a
+              >
+            </li>
+            <li class="relative">
+              <a class="text-neutral-400 text-sm ml-4" href="#mobile">Laptop</a>
+            </li>
+            <li class="relative">
+              <a class="text-neutral-400 text-sm ml-4" href="#mobile"
+                >Headphones</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="col-span-12 md:col-span-6 lg:col-span-3 md:px-4 mt-4">
+          <h3 class="text-gray text-2xl font-bold mb-5">Our Policy</h3>
+          <ul class="menu-links ml-1">
+            <li class="relative">
+              <a class="text-neutral-400 text-sm ml-4" href="#home">Homepage</a>
+            </li>
+            <li class="relative">
+              <a class="text-neutral-400 text-sm ml-4" href="#blogs">Blogs</a>
+            </li>
+            <li class="relative">
+              <a class="text-neutral-400 text-sm ml-4" href="#services"
+                >Services</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="col-span-12 md:col-span-6 lg:col-span-3 md:px-4 mt-4">
+          <h3 class="text-gray text-2xl font-bold mb-5">
+            Subscribe to our Newsletter
+          </h3>
+          <div
+            class="bg-white shadow rounded-full flex items-center justify-between overflow-hidden shadow-slate-300"
+          >
+            <input
+              class="pl-4 w-2/3 focus:outline-none"
+              type="text"
+              placeholder="Enter your email"
+            />
+            <button
+              class="text-white text-sm md:text-base uppercase font-semibold bg-gray px-3 md:px-6 py-2 rounded-full"
+            >
+              Submit
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full bg-wheat flex justify-center md:justify-between">
+        <span class="text-sm text-slate-600 py-6 inline-block px-4"
+          >Copyright by ModelTheme. All Rights Reserved.</span
+        >
+        <span class="text-sm text-slate-600 py-6 hidden md:inline-block px-4"
+          >Elite Author on ThemeForest. Related ThemesPurchase Theme
+        </span>
       </div>
     </footer>
+
+    <script src="./js/script.js"></script>
   </body>
 </html>

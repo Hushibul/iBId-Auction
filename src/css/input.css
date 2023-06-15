@@ -4,27 +4,42 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: "Montserrat", Helvetica, Arial, sans-serif;
-  /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
-}
+@layer base {
+  body {
+    font-family: "Montserrat", Helvetica, Arial, sans-serif;
+    /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
+  }
 
-.brand-logo {
-  background: linear-gradient(
-        to top left,
-        transparent 51%,
-        rgba(255, 0, 0, 0) 30%,
-        #f7f7f7 48%,
-        #fff 58.5%
-      )
-      no-repeat,
-    linear-gradient(to top left, transparent 0.1%, #fff 0.1%) no-repeat;
-  background-size: 45% 172%, 68% 112%;
-  background-position: 93% 0%, 0% 0%;
-  padding: 58px 58px;
-  margin: 0px;
-}
+  .brand-logo {
+    background: linear-gradient(
+          to top left,
+          transparent 51%,
+          rgba(255, 0, 0, 0) 30%,
+          #f7f7f7 48%,
+          #fff 58.5%
+        )
+        no-repeat,
+      linear-gradient(to top left, transparent 0.1%, #fff 0.1%) no-repeat;
+    background-size: 45% 172%, 68% 112%;
+    background-position: 93% 0%, 0% 0%;
+    padding: 58px 58px;
+    margin: 0px;
+  }
 
-.navbar-default {
-  margin-left: -65px;
+  .navbar-default {
+    margin-left: -65px;
+  }
+
+  .menu-links > li::before {
+    content: "\f101";
+    color: #8c8c8c;
+    font-family: "fontawesome";
+    font-weight: bold;
+    left: 0;
+    margin-right: 6px;
+    position: absolute;
+    background: transparent !important;
+    opacity: 0.7;
+    top: 0;
+  }
 }
