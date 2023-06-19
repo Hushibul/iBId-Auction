@@ -507,6 +507,44 @@ ul.filter-list > li > input[type="checkbox"]:checked + label::before {
   background-color: #252525;
 }
 
+.sale-banner::before {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  bottom: 20px;
+  left: 20px;
+  content: "";
+  opacity: 1;
+  transition: opacity 0.35s, transform 0.35s;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  transform: scale(0, 1);
+}
+
+.sale-banner::after {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  bottom: 20px;
+  left: 20px;
+  content: "";
+  opacity: 1;
+  transition: opacity 0.35s, transform 0.35s;
+  border-right: 1px solid #fff;
+  border-left: 1px solid #fff;
+  transform: scale(1, 0);
+}
+
+.sale-banner:hover::before {
+  transform: scale(1, 1);
+  opacity: 1;
+}
+
+.sale-banner:hover::after {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+
 *, ::before, ::after{
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -607,6 +645,56 @@ ul.filter-list > li > input[type="checkbox"]:checked + label::before {
   --tw-backdrop-sepia:  ;
 }
 
+.container{
+  width: 100%;
+}
+
+@media (min-width: 320px){
+  .container{
+    max-width: 320px;
+  }
+}
+
+@media (min-width: 576px){
+  .container{
+    max-width: 576px;
+  }
+}
+
+@media (min-width: 768px){
+  .container{
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 992px){
+  .container{
+    max-width: 992px;
+  }
+}
+
+@media (min-width: 1200px){
+  .container{
+    max-width: 1200px;
+  }
+}
+
+@media (min-width: 1400px){
+  .container{
+    max-width: 1400px;
+  }
+}
+
+@media (min-width: 1536px){
+  .container{
+    max-width: 1536px;
+  }
+}
+
+.fixed{
+  position: fixed;
+}
+
 .absolute{
   position: absolute;
 }
@@ -623,28 +711,20 @@ ul.filter-list > li > input[type="checkbox"]:checked + label::before {
   bottom: 0px;
 }
 
-.bottom-\[30px\]{
-  bottom: 30px;
-}
-
-.bottom-\[80px\]{
-  bottom: 80px;
+.bottom-8{
+  bottom: 2rem;
 }
 
 .left-0{
   left: 0px;
 }
 
-.left-\[130px\]{
-  left: 130px;
+.left-8{
+  left: 2rem;
 }
 
 .right-0{
   right: 0px;
-}
-
-.right-4{
-  right: 1rem;
 }
 
 .top-0{
@@ -655,12 +735,8 @@ ul.filter-list > li > input[type="checkbox"]:checked + label::before {
   top: 3rem;
 }
 
-.top-\[100px\]{
-  top: 100px;
-}
-
-.top-\[50px\]{
-  top: 50px;
+.z-10{
+  z-index: 10;
 }
 
 .z-20{
@@ -673,10 +749,6 @@ ul.filter-list > li > input[type="checkbox"]:checked + label::before {
 
 .col-span-12{
   grid-column: span 12 / span 12;
-}
-
-.col-span-4{
-  grid-column: span 4 / span 4;
 }
 
 .col-span-6{
@@ -693,14 +765,14 @@ ul.filter-list > li > input[type="checkbox"]:checked + label::before {
   margin-right: auto;
 }
 
-.my-20{
-  margin-top: 5rem;
-  margin-bottom: 5rem;
-}
-
 .my-10{
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
+}
+
+.my-20{
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
 .mb-3{
@@ -713,6 +785,10 @@ ul.filter-list > li > input[type="checkbox"]:checked + label::before {
 
 .mb-5{
   margin-bottom: 1.25rem;
+}
+
+.mb-8{
+  margin-bottom: 2rem;
 }
 
 .ml-1{
@@ -735,16 +811,16 @@ ul.filter-list > li > input[type="checkbox"]:checked + label::before {
   margin-right: auto;
 }
 
+.mt-10{
+  margin-top: 2.5rem;
+}
+
 .mt-4{
   margin-top: 1rem;
 }
 
 .mt-8{
   margin-top: 2rem;
-}
-
-.mb-8{
-  margin-bottom: 2rem;
 }
 
 .block{
@@ -775,6 +851,10 @@ ul.filter-list > li > input[type="checkbox"]:checked + label::before {
   height: 2.5rem;
 }
 
+.h-28{
+  height: 7rem;
+}
+
 .h-72{
   height: 18rem;
 }
@@ -789,10 +869,6 @@ ul.filter-list > li > input[type="checkbox"]:checked + label::before {
 
 .h-screen{
   height: 100vh;
-}
-
-.h-28{
-  height: 7rem;
 }
 
 .min-h-\[100px\]{
@@ -811,6 +887,10 @@ ul.filter-list > li > input[type="checkbox"]:checked + label::before {
   width: 66.666667%;
 }
 
+.w-28{
+  width: 7rem;
+}
+
 .w-4\/5{
   width: 80%;
 }
@@ -827,12 +907,52 @@ ul.filter-list > li > input[type="checkbox"]:checked + label::before {
   width: 100%;
 }
 
-.w-28{
-  width: 7rem;
-}
-
 .max-w-\[85px\]{
   max-width: 85px;
+}
+
+.translate-x-20{
+  --tw-translate-x: 5rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-x-32{
+  --tw-translate-x: 8rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-y-12{
+  --tw-translate-y: 3rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-y-16{
+  --tw-translate-y: 4rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-y-\[-48px\]{
+  --tw-translate-y: -48px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-y-20{
+  --tw-translate-y: 5rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-y-0{
+  --tw-translate-y: 0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-y-4{
+  --tw-translate-y: 1rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.transform{
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .cursor-pointer{
@@ -889,6 +1009,16 @@ ul.filter-list > li > input[type="checkbox"]:checked + label::before {
 
 .gap-8{
   gap: 2rem;
+}
+
+.gap-x-14{
+  -moz-column-gap: 3.5rem;
+       column-gap: 3.5rem;
+}
+
+.gap-x-8{
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
 }
 
 .overflow-hidden{
@@ -992,11 +1122,6 @@ ul.filter-list > li > input[type="checkbox"]:checked + label::before {
   background-color: rgb(240 34 34 / var(--tw-bg-opacity));
 }
 
-.bg-sky-500{
-  --tw-bg-opacity: 1;
-  background-color: rgb(14 165 233 / var(--tw-bg-opacity));
-}
-
 .bg-wheat{
   --tw-bg-opacity: 1;
   background-color: rgb(248 248 248 / var(--tw-bg-opacity));
@@ -1076,16 +1201,6 @@ ul.filter-list > li > input[type="checkbox"]:checked + label::before {
   padding-bottom: 1.5rem;
 }
 
-.px-12{
-  padding-left: 3rem;
-  padding-right: 3rem;
-}
-
-.px-16{
-  padding-left: 4rem;
-  padding-right: 4rem;
-}
-
 .pb-4{
   padding-bottom: 1rem;
 }
@@ -1118,10 +1233,6 @@ ul.filter-list > li > input[type="checkbox"]:checked + label::before {
   padding-top: 1.5rem;
 }
 
-.pr-6{
-  padding-right: 1.5rem;
-}
-
 .text-center{
   text-align: center;
 }
@@ -1129,6 +1240,11 @@ ul.filter-list > li > input[type="checkbox"]:checked + label::before {
 .text-2xl{
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.text-4xl{
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 
 .text-lg{
@@ -1146,13 +1262,12 @@ ul.filter-list > li > input[type="checkbox"]:checked + label::before {
   line-height: 1.75rem;
 }
 
-.text-4xl{
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-
 .font-bold{
   font-weight: 700;
+}
+
+.font-extrabold{
+  font-weight: 800;
 }
 
 .font-light{
@@ -1192,6 +1307,16 @@ ul.filter-list > li > input[type="checkbox"]:checked + label::before {
   color: rgb(163 163 163 / var(--tw-text-opacity));
 }
 
+.text-neutral-600{
+  --tw-text-opacity: 1;
+  color: rgb(82 82 82 / var(--tw-text-opacity));
+}
+
+.text-neutral-700{
+  --tw-text-opacity: 1;
+  color: rgb(64 64 64 / var(--tw-text-opacity));
+}
+
 .text-neutral-800{
   --tw-text-opacity: 1;
   color: rgb(38 38 38 / var(--tw-text-opacity));
@@ -1205,16 +1330,6 @@ ul.filter-list > li > input[type="checkbox"]:checked + label::before {
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-neutral-700{
-  --tw-text-opacity: 1;
-  color: rgb(64 64 64 / var(--tw-text-opacity));
-}
-
-.text-neutral-600{
-  --tw-text-opacity: 1;
-  color: rgb(82 82 82 / var(--tw-text-opacity));
 }
 
 .opacity-0{
@@ -1257,6 +1372,18 @@ ul.filter-list > li > input[type="checkbox"]:checked + label::before {
 .shadow-slate-400{
   --tw-shadow-color: #94a3b8;
   --tw-shadow: var(--tw-shadow-colored);
+}
+
+.filter{
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.transition{
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 .duration-150{
@@ -1390,6 +1517,11 @@ ul.filter-list > li > input[type="checkbox"]:checked + label::before {
 
   .md\:justify-between{
     justify-content: space-between;
+  }
+
+  .md\:px-16{
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 
   .md\:px-4{

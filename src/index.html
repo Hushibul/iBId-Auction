@@ -8,6 +8,7 @@
       rel="stylesheet"
       href="./vendor/fontawesome-free/font-awesome.min.css"
     />
+    <script src="./vendor/mixitup/mixitup.min.js"></script>
     <!-- <link rel="stylesheet" href="./vendor/fontawesome-free/all.min.css" /> -->
     <title>iBid &#8211; Multi Vendor Auctions WooCommerce Theme</title>
   </head>
@@ -237,37 +238,39 @@
     <!-- Main Content  -->
     <main>
       <!-- Hero Section  -->
-      <!-- <section class="flex flex-col sm:flex-row h-screen">
-        <div class="w-full sm:w-1/2 px-4 py-16">
+      <section class="flex flex-col sm:flex-row h-screen mt-10">
+        <div class="w-full sm:w-1/2 px-6 py-16">
           <h1
             class="text-xl sm:text-3xl md:text-[44px] md:leading-[44px] font-bold text-black"
           >
             The best NFT Marketplace for your needs
           </h1>
         </div>
-        <div class="bg-red w-full sm:w-1/2 img-group relative">
-          <div class="absolute top-[100px] left-[130px]">
+        <div
+          class="w-full sm:w-1/2 grid grid-cols-12 overflow-hidden img-group relative"
+        >
+          <div class="col-span-6 translate-y-16 translate-x-32">
             <img
               class="w-72 h-72 rounded-t-5xl"
               src="./img/bg/nft-bg-3.jpg"
               alt=""
             />
           </div>
-          <div class="absolute top-[50px] right-4">
+          <div class="col-span-6 translate-x-20">
             <img
               class="w-72 h-72 rounded-t-5xl"
               src="./img/bg/nft-bg-3.jpg"
               alt=""
             />
           </div>
-          <div class="absolute bottom-[30px] left-[130px]">
+          <div class="col-span-6 translate-y-4 translate-x-32">
             <img
               class="w-72 h-72 rounded-b-5xl"
               src="./img/bg/nft-bg-3.jpg"
               alt=""
             />
           </div>
-          <div class="absolute bottom-[80px] right-4">
+          <div class="col-span-6 translate-y-[-48px] translate-x-20">
             <img
               class="w-72 h-72 rounded-b-5xl"
               src="./img/bg/nft-bg-3.jpg"
@@ -275,7 +278,7 @@
             />
           </div>
         </div>
-      </section> -->
+      </section>
 
       <!-- Gallery section  -->
       <section class="my-20 w-full box-shadow-sm">
@@ -296,61 +299,61 @@
             >
           </div>
           <ul
-            class="w-full lg:w-4/5 col-span-12 bg-white box-shadow-sm flex flex-col md:flex-row items-center justify-center flex-wrap gap-6 py-4"
+            class="w-full lg:w-4/5 col-span-12 bg-white box-shadow-sm flex flex-col md:flex-row items-center justify-center flex-wrap gap-x-14 py-4"
           >
             <li>
               <a
-                class="text-neutral-800 font-semibold text-sm uppercase"
-                data-type="all"
+                class="text-neutral-800 font-bold text-sm uppercase"
+                data-filter=".mix"
                 href="#all"
                 >All</a
               >
             </li>
             <li class="menu-list hidden md:block">
               <a
-                class="text-neutral-800 font-semibold text-sm uppercase"
-                data-type="art"
+                class="text-neutral-800 font-bold text-sm uppercase"
+                data-filter=".art"
                 href="#art"
                 >Art</a
               >
             </li>
             <li class="menu-list hidden md:block">
               <a
-                class="text-neutral-800 font-semibold text-sm uppercase"
+                class="text-neutral-800 font-bold text-sm uppercase"
                 href="#domain"
-                data-type="domain"
+                data-filter=".domain"
                 >Domain</a
               >
             </li>
             <li class="menu-list hidden md:block">
               <a
-                class="text-neutral-800 font-semibold text-sm uppercase"
+                class="text-neutral-800 font-bold text-sm uppercase"
                 href="#sports"
-                data-type="sports"
+                data-filter=".sports"
                 >Sports</a
               >
             </li>
             <li class="menu-list hidden md:block">
               <a
-                class="text-neutral-800 font-semibold text-sm uppercase"
+                class="text-neutral-800 font-bold text-sm uppercase"
                 href="#trading-cards"
-                data-type="trading-cards"
+                data-filter=".trading-cards"
                 >Trading Cards</a
               >
             </li>
             <li class="menu-list hidden md:block">
               <a
-                class="text-neutral-800 font-semibold text-sm uppercase"
+                class="text-neutral-800 font-bold text-sm uppercase"
                 href="#utility"
-                data-type="utility"
+                data-filter=".utility"
                 >Utility</a
               >
             </li>
             <li class="menu-list hidden md:block">
               <a
-                class="text-neutral-800 font-semibold text-sm uppercase"
+                class="text-neutral-800 font-bold text-sm uppercase"
                 href="#virtual-worlds"
-                data-type="virtual-worlds"
+                data-filter=".virtual-worlds"
                 >Virtual Worlds</a
               >
             </li>
@@ -364,6 +367,7 @@
             <form class="pl-6 pr-4 mt-4">
               <h3 class="font-bold text-sm uppercase text-gray mb-3">Search</h3>
               <input
+                id="search-filter"
                 class="p-2 w-full bg-neutral-200 text-sm border-2 border-transparent placeholder:text-neutral-400 focus-within:outline-none focus- focus-within:border-black"
                 type="text"
                 placeholder="Search..."
@@ -376,15 +380,33 @@
               </h3>
               <ul class="filter-list">
                 <li class="relative py-2 text-sm text-gray">
-                  <input type="checkbox" name="artavatars" id="artavatars" />
+                  <input
+                    class="filter"
+                    data-filter=".artavatars"
+                    type="checkbox"
+                    name="artavatars"
+                    id="artavatars"
+                  />
                   <label for="artavatars">Artavatars</label>
                 </li>
                 <li class="relative py-2 text-sm text-gray">
-                  <input type="checkbox" name="nftboxes" id="nftboxes" />
+                  <input
+                    class="filter"
+                    data-filter=".nftboxes"
+                    type="checkbox"
+                    name="nftboxes"
+                    id="nftboxes"
+                  />
                   <label for="nftboxes">Nftboxes</label>
                 </li>
                 <li class="relative py-2 text-sm text-gray">
-                  <input type="checkbox" name="rarible" id="rarible" />
+                  <input
+                    class="filter"
+                    data-filter=".rarible"
+                    type="checkbox"
+                    name="rarible"
+                    id="rarible"
+                  />
                   <label for="rarible">Rarible</label>
                 </li>
               </ul>
@@ -394,15 +416,33 @@
               </h3>
               <ul class="filter-list">
                 <li class="relative py-2 text-sm text-gray">
-                  <input type="checkbox" name="abst" id="abst" />
+                  <input
+                    class="filter"
+                    data-filter=".abst"
+                    type="checkbox"
+                    name="abst"
+                    id="abst"
+                  />
                   <label for="abst">ABST</label>
                 </li>
                 <li class="relative py-2 text-sm text-gray">
-                  <input type="checkbox" name="eth" id="eth" />
+                  <input
+                    class="filter"
+                    data-filter=".eth"
+                    type="checkbox"
+                    name="eth"
+                    id="eth"
+                  />
                   <label for="eth">ETH</label>
                 </li>
                 <li class="relative py-2 text-sm text-gray">
-                  <input type="checkbox" name="hue" id="hue" />
+                  <input
+                    class="filter"
+                    data-filter=".hue"
+                    type="checkbox"
+                    name="hue"
+                    id="hue"
+                  />
                   <label for="hue">HUE</label>
                 </li>
               </ul>
@@ -412,15 +452,33 @@
               </h3>
               <ul class="filter-list">
                 <li class="relative py-2 text-sm text-gray">
-                  <input type="checkbox" name="buynow" id="buynow" />
+                  <input
+                    class="filter"
+                    data-filter=".buynow"
+                    type="checkbox"
+                    name="buynow"
+                    id="buynow"
+                  />
                   <label for="buynow">Buy Now</label>
                 </li>
                 <li class="relative py-2 text-sm text-gray">
-                  <input type="checkbox" name="hasoffers" id="hasoffers" />
+                  <input
+                    class="filter"
+                    data-filter=".hasoffers"
+                    type="checkbox"
+                    name="hasoffers"
+                    id="hasoffers"
+                  />
                   <label for="hasoffers">Has Offers</label>
                 </li>
                 <li class="relative py-2 text-sm text-gray">
-                  <input type="checkbox" name="onauction" id="onauction" />
+                  <input
+                    class="filter"
+                    data-filter=".onauction"
+                    type="checkbox"
+                    name="onauction"
+                    id="onauction"
+                  />
                   <label for="onauction">On Auction</label>
                 </li>
               </ul>
@@ -430,55 +488,116 @@
               </h3>
               <ul class="filter-list">
                 <li class="relative py-2 text-sm text-gray">
-                  <input type="checkbox" name="blackfriday" id="blackfriday" />
-                  <label for="blackfriday">black Friday</label>
+                  <input
+                    class="filter"
+                    data-filter=".black-friday"
+                    type="checkbox"
+                    name="blackfriday"
+                    id="blackfriday"
+                  />
+                  <label for="blackfriday">black friday</label>
                 </li>
                 <li class="relative py-2 text-sm text-gray">
-                  <input type="checkbox" name="vocational" id="vocational" />
+                  <input
+                    class="filter"
+                    data-filter=".vocational"
+                    type="checkbox"
+                    name="vocational"
+                    id="vocational"
+                  />
                   <label for="vocational">vocational</label>
                 </li>
                 <li class="relative py-2 text-sm text-gray">
-                  <input type="checkbox" name="sales" id="sales" />
+                  <input
+                    class="filter"
+                    data-filter=".sales"
+                    type="checkbox"
+                    name="sales"
+                    id="sales"
+                  />
                   <label for="sales">sales</label>
                 </li>
                 <li class="relative py-2 text-sm text-gray">
-                  <input type="checkbox" name="speech" id="speech" />
+                  <input
+                    class="filter"
+                    data-filter=".speech"
+                    type="checkbox"
+                    name="speech"
+                    id="speech"
+                  />
                   <label for="speech">speech</label>
                 </li>
                 <li class="relative py-2 text-sm text-gray">
-                  <input type="checkbox" name="language" id="language" />
+                  <input
+                    class="filter"
+                    data-filter=".language"
+                    type="checkbox"
+                    name="language"
+                    id="language"
+                  />
                   <label for="language">language</label>
                 </li>
                 <li class="relative py-2 text-sm text-gray">
-                  <input type="checkbox" name="film" id="film" />
+                  <input
+                    class="filter"
+                    data-filter=".film"
+                    type="checkbox"
+                    name="film"
+                    id="film"
+                  />
                   <label for="film">film</label>
                 </li>
                 <li class="relative py-2 text-sm text-gray">
-                  <input type="checkbox" name="vintage" id="vintage" />
+                  <input
+                    class="filter"
+                    data-filter=".vintage"
+                    type="checkbox"
+                    name="vintage"
+                    id="vintage"
+                  />
                   <label for="vintage">vintage</label>
                 </li>
                 <li class="relative py-2 text-sm text-gray">
-                  <input type="checkbox" name="vocational" id="vocational" />
+                  <input
+                    class="filter"
+                    data-filter=".vocational"
+                    type="checkbox"
+                    name="vocational"
+                    id="vocational"
+                  />
                   <label for="vocational">vocational</label>
                 </li>
                 <li class="relative py-2 text-sm text-gray">
-                  <input type="checkbox" name="literature" id="literature" />
+                  <input
+                    class="filter"
+                    data-filter=".literature"
+                    type="checkbox"
+                    name="literature"
+                    id="literature"
+                  />
                   <label for="literature">literature</label>
                 </li>
                 <li class="relative py-2 text-sm text-gray">
-                  <input type="checkbox" name="food" id="food" />
+                  <input
+                    class="filter"
+                    data-filter=".food"
+                    type="checkbox"
+                    name="food"
+                    id="food"
+                  />
                   <label for="food">food</label>
                 </li>
               </ul>
             </div>
           </div>
 
+          <!-- Card Gallery  -->
           <div
             id="cards-gallery"
             class="w-full pt-10 pl-6 pr-4 lg:w-4/5 grid grid-cols-12"
           >
             <div
-              class="col-span-12 sm:col-span-6 md:col-span-4 xl:col-span-3 flex flex-col justify-center items-center bg-white pb-8 mx-4 shadow-lg shadow-slate-300 mb-8"
+              class="mix col-span-12 sm:col-span-6 md:col-span-4 xl:col-span-3 flex flex-col justify-center items-center bg-white pb-8 mx-4 shadow-lg shadow-slate-300 mb-8 art nft product name"
             >
               <img
                 class="w-full"
@@ -495,7 +614,7 @@
             </div>
 
             <div
-              class="col-span-12 sm:col-span-6 md:col-span-4 xl:col-span-3 flex flex-col justify-center items-center bg-white pb-8 mx-4 shadow-lg shadow-slate-300 mb-8"
+              class="mix col-span-12 sm:col-span-6 md:col-span-4 xl:col-span-3 flex flex-col justify-center items-center bg-white pb-8 mx-4 shadow-lg shadow-slate-300 mb-8 artavatars buy-now eth domains Eternity #02 film languages"
             >
               <img
                 class="w-full"
@@ -512,7 +631,7 @@
             </div>
 
             <div
-              class="col-span-12 sm:col-span-6 md:col-span-4 xl:col-span-3 flex flex-col justify-center items-center bg-white pb-8 mx-4 shadow-lg shadow-slate-300 mb-8"
+              class="mix col-span-12 sm:col-span-6 md:col-span-4 xl:col-span-3 flex flex-col justify-center items-center bg-white pb-8 mx-4 shadow-lg shadow-slate-300 mb-8 rarible on-auction sports Breeds #264 vocational"
             >
               <img class="w-full" src="./img/others/breeds.jpg" alt="Breeds" />
               <h3 class="text-xl font-bold text-gray py-4">Breeds #264</h3>
@@ -525,7 +644,7 @@
             </div>
 
             <div
-              class="col-span-12 sm:col-span-6 md:col-span-4 xl:col-span-3 flex flex-col justify-center items-center bg-white pb-8 mx-4 shadow-lg shadow-slate-300 mb-8"
+              class="mix col-span-12 sm:col-span-6 md:col-span-4 xl:col-span-3 flex flex-col justify-center items-center bg-white pb-8 mx-4 shadow-lg shadow-slate-300 mb-8 nftboxes buy-now hue virtual-worlds Model #312 black-friday"
             >
               <img class="w-full" src="./img/others/model.jpg" alt="Model" />
               <h3 class="text-xl font-bold text-gray py-4">Model #312</h3>
@@ -538,7 +657,7 @@
             </div>
 
             <div
-              class="col-span-12 sm:col-span-6 md:col-span-4 xl:col-span-3 flex flex-col justify-center items-center bg-white pb-8 mx-4 shadow-lg shadow-slate-300 mb-8"
+              class="mix col-span-12 sm:col-span-6 md:col-span-4 xl:col-span-3 flex flex-col justify-center items-center bg-white pb-8 mx-4 shadow-lg shadow-slate-300 mb-8 artavatars has-offers hue domains #33 Hypnotic black-friday sales"
             >
               <img
                 class="w-full"
@@ -555,7 +674,7 @@
             </div>
 
             <div
-              class="col-span-12 sm:col-span-6 md:col-span-4 xl:col-span-3 flex flex-col justify-center items-center bg-white pb-8 mx-4 shadow-lg shadow-slate-300 mb-8"
+              class="mix col-span-12 sm:col-span-6 md:col-span-4 xl:col-span-3 flex flex-col justify-center items-center bg-white pb-8 mx-4 shadow-lg shadow-slate-300 mb-8 rarible buy-now eth sports PiXEL FREAK vocational"
             >
               <img
                 class="w-full"
@@ -572,7 +691,7 @@
             </div>
 
             <div
-              class="col-span-12 sm:col-span-6 md:col-span-4 xl:col-span-3 flex flex-col justify-center items-center bg-white pb-8 mx-4 shadow-lg shadow-slate-300 mb-8"
+              class="mix col-span-12 sm:col-span-6 md:col-span-4 xl:col-span-3 flex flex-col justify-center items-center bg-white pb-8 mx-4 shadow-lg shadow-slate-300 mb-8 artavatars has-offers abst trading-cards Quirky Cat speech"
             >
               <img
                 class="w-full"
@@ -589,7 +708,7 @@
             </div>
 
             <div
-              class="col-span-12 sm:col-span-6 md:col-span-4 xl:col-span-3 flex flex-col justify-center items-center bg-white pb-8 mx-4 shadow-lg shadow-slate-300 mb-8"
+              class="mix col-span-12 sm:col-span-6 md:col-span-4 xl:col-span-3 flex flex-col justify-center items-center bg-white pb-8 mx-4 shadow-lg shadow-slate-300 mb-8 rarible on-auction hue domains Ginger Zippykey speech"
             >
               <img
                 class="w-full"
@@ -606,7 +725,7 @@
             </div>
 
             <div
-              class="col-span-12 sm:col-span-6 md:col-span-4 xl:col-span-3 flex flex-col justify-center items-center bg-white pb-8 mx-4 shadow-lg shadow-slate-300 mb-8"
+              class="mix col-span-12 sm:col-span-6 md:col-span-4 xl:col-span-3 flex flex-col justify-center items-center bg-white pb-8 mx-4 shadow-lg shadow-slate-300 mb-8 nftboxes has-offers eth sports Crypterior #129 vocational"
             >
               <img
                 class="w-full"
@@ -623,7 +742,7 @@
             </div>
 
             <div
-              class="col-span-12 sm:col-span-6 md:col-span-4 xl:col-span-3 flex flex-col justify-center items-center bg-white pb-8 mx-4 shadow-lg shadow-slate-300 mb-8"
+              class="mix col-span-12 sm:col-span-6 md:col-span-4 xl:col-span-3 flex flex-col justify-center items-center bg-white pb-8 mx-4 shadow-lg shadow-slate-300 mb-8 artavatars has-offers eth utility Piccasso Kong"
             >
               <img
                 class="w-full"
@@ -640,7 +759,7 @@
             </div>
 
             <div
-              class="col-span-12 sm:col-span-6 md:col-span-4 xl:col-span-3 flex flex-col justify-center items-center bg-white pb-8 mx-4 shadow-lg shadow-slate-300 mb-8"
+              class="mix col-span-12 sm:col-span-6 md:col-span-4 xl:col-span-3 flex flex-col justify-center items-center bg-white pb-8 mx-4 shadow-lg shadow-slate-300 mb-8 artavatars buy-now abst utility Cyberpunkz film"
             >
               <img
                 class="w-full"
@@ -657,12 +776,12 @@
             </div>
 
             <div
-              class="col-span-12 sm:col-span-6 md:col-span-4 xl:col-span-3 flex flex-col justify-center items-center bg-white pb-8 mx-4 shadow-lg shadow-slate-300 mb-8"
+              class="mix col-span-12 sm:col-span-6 md:col-span-4 xl:col-span-3 flex flex-col justify-center items-center bg-white pb-8 mx-4 shadow-lg shadow-slate-300 mb-8 artavatars has-offers trading-cards MoonCats #3041 languages"
             >
               <img
                 class="w-full"
-                src="./img/others/hyponotic.jpg"
-                alt="Hypnotic"
+                src="./img/others/moon-cat.jpg"
+                alt="Moon Cat"
               />
               <h3 class="text-xl font-bold text-gray py-4">MoonCats #3041</h3>
               <p class="text-sm font-bold text-blue pb-4">$1500.00</p>
@@ -674,7 +793,7 @@
             </div>
 
             <div
-              class="col-span-12 sm:col-span-6 md:col-span-4 xl:col-span-3 flex flex-col justify-center items-center bg-white pb-8 mx-4 shadow-lg shadow-slate-300 mb-8"
+              class="mix col-span-12 sm:col-span-6 md:col-span-4 xl:col-span-3 flex flex-col justify-center items-center bg-white pb-8 mx-4 shadow-lg shadow-slate-300 mb-8 nftboxes has-offers eth trading-cards ASCII Punk vintage"
             >
               <img
                 class="w-full"
@@ -691,7 +810,7 @@
             </div>
 
             <div
-              class="col-span-12 sm:col-span-6 md:col-span-4 xl:col-span-3 flex flex-col justify-center items-center bg-white pb-8 mx-4 shadow-lg shadow-slate-300 mb-8"
+              class="mix col-span-12 sm:col-span-6 md:col-span-4 xl:col-span-3 flex flex-col justify-center items-center bg-white pb-8 mx-4 shadow-lg shadow-slate-300 mb-8 artavatars on-auction eth art Honest dream. black-friday sales"
             >
               <img
                 class="w-full"
@@ -708,7 +827,7 @@
             </div>
 
             <div
-              class="col-span-12 sm:col-span-6 md:col-span-4 xl:col-span-3 flex flex-col justify-center items-center bg-white pb-8 mx-4 shadow-lg shadow-slate-300 mb-8"
+              class="mix col-span-12 sm:col-span-6 md:col-span-4 xl:col-span-3 flex flex-col justify-center items-center bg-white pb-8 mx-4 shadow-lg shadow-slate-300 mb-8 abst rarible buy-now virtual-worlds Hashmasks #113 literature"
             >
               <img
                 class="w-full"
@@ -725,7 +844,7 @@
             </div>
 
             <div
-              class="col-span-12 sm:col-span-6 md:col-span-4 xl:col-span-3 flex flex-col justify-center items-center bg-white pb-8 mx-4 shadow-lg shadow-slate-300 mb-8"
+              class="mix col-span-12 sm:col-span-6 md:col-span-4 xl:col-span-3 flex flex-col justify-center items-center bg-white pb-8 mx-4 shadow-lg shadow-slate-300 mb-8 nftboxes on-auction hue art Corgi #2844 food"
             >
               <img class="w-full" src="./img/others/corgi.jpg" alt="corgi" />
               <h3 class="text-xl font-bold text-gray py-4">Corgi #2844</h3>
@@ -740,9 +859,35 @@
         </div>
       </section>
 
+      <!-- Sale Banner section  -->
+      <section
+        class="my-20 flex gap-x-8 px-8 md:px-16 flex-col items-center md:flex-row"
+      >
+        <div class="relative mt-8 sale-banner cursor-pointer">
+          <img src="./img/bg/art-bg.jpg" alt="Pokemon" />
+          <div class="absolute bottom-8 left-8">
+            <h3 class="text-2xl font-extrabold text-white">
+              Rare NFTs Collectibles
+            </h3>
+            <p class="text-white">
+              Kittens, and memes are now trading digital wallets for crypto.
+            </p>
+          </div>
+        </div>
+        <div class="relative sale-banner mt-8 cursor-pointer">
+          <img src="./img/bg/pokemon-bg.jpg" alt="Pokemon" />
+          <div class="absolute bottom-8 left-8 z-10">
+            <h3 class="text-2xl font-extrabold text-white">Trading Cards</h3>
+            <p class="text-white">
+              Players can now trade in-game items on third-party platforms
+            </p>
+          </div>
+        </div>
+      </section>
+
       <!-- Latest News section  -->
       <section class="my-10">
-        <div>
+        <div class="block">
           <h2 class="text-4xl text-neutral-700 uppercase text-center font-bold">
             Latest News
           </h2>
