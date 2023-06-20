@@ -48,12 +48,12 @@
   }
 
   .rounded-t-5xl {
-    border-top-right-radius: 100px;
-    border-top-left-radius: 100px;
+    border-top-right-radius: 60px;
+    border-top-left-radius: 60px;
   }
   .rounded-b-5xl {
-    border-bottom-right-radius: 100px;
-    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 60px;
+    border-bottom-left-radius: 60px;
   }
 
   ul.filter-list > li > input[type="checkbox"] {
@@ -130,5 +130,21 @@
   .sale-banner:hover::after {
     opacity: 1;
     transform: scale(1, 1);
+  }
+
+  .scale-animation {
+    animation: scaleAnimation 2s ease infinite normal forwards;
+  }
+}
+
+@keyframes scaleAnimation {
+  0% {
+    transform: scale(50%);
+  }
+  50% {
+    transform: scale(100%);
+  }
+  100% {
+    transform: scale(50%);
   }
 }

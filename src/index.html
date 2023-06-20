@@ -238,45 +238,92 @@
     <!-- Main Content  -->
     <main>
       <!-- Hero Section  -->
-      <section class="flex flex-col sm:flex-row h-screen mt-10">
-        <div class="w-full sm:w-1/2 px-6 py-16">
-          <h1
-            class="text-xl sm:text-3xl md:text-[44px] md:leading-[44px] font-bold text-black"
-          >
+      <section
+        id="hero"
+        class="flex flex-col md:flex-row h-screen my-10 md:my-20 overflow-x-hidden group relative"
+      >
+        <div class="w-full md:w-1/2 px-6 md:px-10 xl:px-20 xl:ml-20 md:py-16">
+          <h1 class="text-3xl md:text-5xl xl:text-6xl font-bold text-black">
             The best NFT Marketplace for your needs
           </h1>
+
+          <p class="text-gray py-6">
+            We understand that innovative solutions are synthesized from
+            effective communication.
+          </p>
+
+          <p class="text-gray">
+            Our product facilitates this process with clean, efficient UI/UX and
+            an affordable pricing structure.
+          </p>
         </div>
+
         <div
-          class="w-full sm:w-1/2 grid grid-cols-12 overflow-hidden img-group relative"
+          class="flex justify-center md:justify-start gap-2 mt-10 md:mt-0 px-6 md:px-20 md:gap-5 xl:gap-10"
         >
-          <div class="col-span-6 translate-y-16 translate-x-32">
-            <img
-              class="w-72 h-72 rounded-t-5xl"
-              src="./img/bg/nft-bg-3.jpg"
-              alt=""
-            />
+          <div
+            class="w-full md:mt-20 sm:w-1/2 flex flex-col gap-2 md:gap-5 xl:gap-10"
+          >
+            <div class="relative">
+              <img
+                class="max-w-full max-h-full md:w-48 md:h-48 lg:w-60 lg:h-60 xl:w-72 xl:h-72 rounded-t-5xl"
+                src="./img/bg/nft-bg-1.jpg"
+                alt=""
+              />
+              <div
+                class="absolute top-0 left-0 max-w-full max-h-full md:w-48 md:h-48 lg:w-60 lg:h-60 xl:w-72 xl:h-72 hidden md:block rounded-t-5xl bg-cyan-100 group-hover:-translate-x-10 translate-y-10 -z-10 transition-all duration-1000"
+              ></div>
+            </div>
+            <div class="relative">
+              <img
+                class="max-w-full max-h-full md:w-48 md:h-48 lg:w-60 lg:h-60 xl:w-72 xl:h-72 rounded-b-5xl"
+                src="./img/bg/nft-bg-3.jpg"
+                alt=""
+              />
+              <div
+                class="absolute top-0 left-0 max-w-full max-h-full md:w-48 md:h-48 lg:w-60 lg:h-60 xl:w-72 xl:h-72 hidden md:block rounded-b-5xl group-hover:-translate-x-10 translate-y-10 bg-sky-100 -z-10 transition-all duration-1000"
+              ></div>
+            </div>
           </div>
-          <div class="col-span-6 translate-x-20">
-            <img
-              class="w-72 h-72 rounded-t-5xl"
-              src="./img/bg/nft-bg-3.jpg"
-              alt=""
-            />
+          <div class="w-full sm:w-1/2 flex flex-col gap-2 md:gap-5 xl:gap-10">
+            <div class="relative">
+              <img
+                class="max-w-full max-h-full md:w-48 md:h-48 lg:w-60 lg:h-60 xl:w-72 xl:h-72 rounded-t-5xl"
+                src="./img/bg/nft-bg-2.jpg"
+                alt=""
+              />
+              <div
+                class="absolute top-0 left-0 w-60 h-60 hidden md:block xl:w-72 xl:h-72 rounded-t-5xl group-hover:-translate-x-10 translate-y-10 bg-orange-100 -z-10 transition-all duration-1000"
+              ></div>
+            </div>
+            <div class="relative">
+              <img
+                class="max-w-full max-h-full md:w-48 md:h-48 lg:w-60 lg:h-60 xl:w-72 xl:h-72 rounded-b-5xl"
+                src="./img/bg/nft-bg-4.jpg"
+                alt=""
+              />
+              <div
+                class="absolute top-0 left-0 max-w-full max-h-full md:w-48 md:h-48 lg:w-60 lg:h-60 xl:w-72 xl:h-72 hidden md:block rounded-b-5xl group-hover:-translate-x-10 translate-y-10 bg-emerald-100 -z-10 transition-all duration-1000"
+              ></div>
+            </div>
           </div>
-          <div class="col-span-6 translate-y-4 translate-x-32">
-            <img
-              class="w-72 h-72 rounded-b-5xl"
-              src="./img/bg/nft-bg-3.jpg"
-              alt=""
-            />
-          </div>
-          <div class="col-span-6 translate-y-[-48px] translate-x-20">
-            <img
-              class="w-72 h-72 rounded-b-5xl"
-              src="./img/bg/nft-bg-3.jpg"
-              alt=""
-            />
-          </div>
+        </div>
+
+        <div
+          class="absolute bottom-0 md:bottom-40 left-1/4 -translate-x-1/4 p-6 flex flex-col items-center justify-center gap-x-10 sm:flex-row px-10 bg-neutral-400 rounded-md"
+        >
+          <h3 class="text-white text-center md:text-left lg:text-xl font-bold">
+            Check from over 8 million NFTs on the Marketplace
+          </h3>
+          <button
+            class="p-2 md:px-6 md:py-4 rounded bg-blue text-sm md:text-lg text-white font-semibold"
+          >
+            Explore
+          </button>
+
+          <div
+            class="w-4 h-4 rounded-full bg-blue scale-animation absolute top-4 left-4"
+          ></div>
         </div>
       </section>
 
@@ -304,7 +351,7 @@
             <li>
               <a
                 class="text-neutral-800 font-bold text-sm uppercase"
-                data-filter=".mix"
+                data-filter="all"
                 href="#all"
                 >All</a
               >
@@ -321,7 +368,7 @@
               <a
                 class="text-neutral-800 font-bold text-sm uppercase"
                 href="#domain"
-                data-filter=".domain"
+                data-filter=".domains"
                 >Domain</a
               >
             </li>
@@ -381,8 +428,8 @@
               <ul class="filter-list">
                 <li class="relative py-2 text-sm text-gray">
                   <input
-                    class="filter"
-                    data-filter=".artavatars"
+                    class="toggle"
+                    data-toggle=".artavatars"
                     type="checkbox"
                     name="artavatars"
                     id="artavatars"
@@ -391,8 +438,8 @@
                 </li>
                 <li class="relative py-2 text-sm text-gray">
                   <input
-                    class="filter"
-                    data-filter=".nftboxes"
+                    class="toggle"
+                    data-toggle=".nftboxes"
                     type="checkbox"
                     name="nftboxes"
                     id="nftboxes"
@@ -401,8 +448,8 @@
                 </li>
                 <li class="relative py-2 text-sm text-gray">
                   <input
-                    class="filter"
-                    data-filter=".rarible"
+                    class="toggle"
+                    data-toggle=".rarible"
                     type="checkbox"
                     name="rarible"
                     id="rarible"
@@ -417,8 +464,8 @@
               <ul class="filter-list">
                 <li class="relative py-2 text-sm text-gray">
                   <input
-                    class="filter"
-                    data-filter=".abst"
+                    class="toggle"
+                    data-toggle=".abst"
                     type="checkbox"
                     name="abst"
                     id="abst"
@@ -427,8 +474,8 @@
                 </li>
                 <li class="relative py-2 text-sm text-gray">
                   <input
-                    class="filter"
-                    data-filter=".eth"
+                    class="toggle"
+                    data-toggle=".eth"
                     type="checkbox"
                     name="eth"
                     id="eth"
@@ -437,8 +484,8 @@
                 </li>
                 <li class="relative py-2 text-sm text-gray">
                   <input
-                    class="filter"
-                    data-filter=".hue"
+                    class="toggle"
+                    data-toggle=".hue"
                     type="checkbox"
                     name="hue"
                     id="hue"
@@ -453,8 +500,8 @@
               <ul class="filter-list">
                 <li class="relative py-2 text-sm text-gray">
                   <input
-                    class="filter"
-                    data-filter=".buynow"
+                    class="toggle"
+                    data-toggle=".buynow"
                     type="checkbox"
                     name="buynow"
                     id="buynow"
@@ -463,8 +510,8 @@
                 </li>
                 <li class="relative py-2 text-sm text-gray">
                   <input
-                    class="filter"
-                    data-filter=".hasoffers"
+                    class="toggle"
+                    data-toggle=".hasoffers"
                     type="checkbox"
                     name="hasoffers"
                     id="hasoffers"
@@ -473,8 +520,8 @@
                 </li>
                 <li class="relative py-2 text-sm text-gray">
                   <input
-                    class="filter"
-                    data-filter=".onauction"
+                    class="toggle"
+                    data-toggle=".onauction"
                     type="checkbox"
                     name="onauction"
                     id="onauction"
@@ -489,8 +536,8 @@
               <ul class="filter-list">
                 <li class="relative py-2 text-sm text-gray">
                   <input
-                    class="filter"
-                    data-filter=".black-friday"
+                    class="toggle"
+                    data-toggle=".black-friday"
                     type="checkbox"
                     name="blackfriday"
                     id="blackfriday"
@@ -499,8 +546,8 @@
                 </li>
                 <li class="relative py-2 text-sm text-gray">
                   <input
-                    class="filter"
-                    data-filter=".vocational"
+                    class="toggle"
+                    data-toggle=".vocational"
                     type="checkbox"
                     name="vocational"
                     id="vocational"
@@ -509,8 +556,8 @@
                 </li>
                 <li class="relative py-2 text-sm text-gray">
                   <input
-                    class="filter"
-                    data-filter=".sales"
+                    class="toggle"
+                    data-toggle=".sales"
                     type="checkbox"
                     name="sales"
                     id="sales"
@@ -519,8 +566,8 @@
                 </li>
                 <li class="relative py-2 text-sm text-gray">
                   <input
-                    class="filter"
-                    data-filter=".speech"
+                    class="toggle"
+                    data-toggle=".speech"
                     type="checkbox"
                     name="speech"
                     id="speech"
@@ -529,8 +576,8 @@
                 </li>
                 <li class="relative py-2 text-sm text-gray">
                   <input
-                    class="filter"
-                    data-filter=".language"
+                    class="toggle"
+                    data-toggle=".language"
                     type="checkbox"
                     name="language"
                     id="language"
@@ -539,8 +586,8 @@
                 </li>
                 <li class="relative py-2 text-sm text-gray">
                   <input
-                    class="filter"
-                    data-filter=".film"
+                    class="toggle"
+                    data-toggle=".film"
                     type="checkbox"
                     name="film"
                     id="film"
@@ -549,8 +596,8 @@
                 </li>
                 <li class="relative py-2 text-sm text-gray">
                   <input
-                    class="filter"
-                    data-filter=".vintage"
+                    class="toggle"
+                    data-toggle=".vintage"
                     type="checkbox"
                     name="vintage"
                     id="vintage"
@@ -559,8 +606,8 @@
                 </li>
                 <li class="relative py-2 text-sm text-gray">
                   <input
-                    class="filter"
-                    data-filter=".vocational"
+                    class="toggle"
+                    data-toggle=".vocational"
                     type="checkbox"
                     name="vocational"
                     id="vocational"
@@ -569,8 +616,8 @@
                 </li>
                 <li class="relative py-2 text-sm text-gray">
                   <input
-                    class="filter"
-                    data-filter=".literature"
+                    class="toggle"
+                    data-toggle=".literature"
                     type="checkbox"
                     name="literature"
                     id="literature"
@@ -579,8 +626,8 @@
                 </li>
                 <li class="relative py-2 text-sm text-gray">
                   <input
-                    class="filter"
-                    data-filter=".food"
+                    class="toggle"
+                    data-toggle=".food"
                     type="checkbox"
                     name="food"
                     id="food"
@@ -908,7 +955,7 @@
           </svg>
         </div>
 
-        <div class="grid grid-cols-12 px-6 mt-8">
+        <div class="grid grid-cols-12 px-8 md:px-16 mt-8">
           <div
             class="col-span-12 md:col-span-6 mt-4 lg:col-span-4 flex items-center md:pr-6 gap-6"
           >
@@ -989,7 +1036,7 @@
 
     <!-- Footer  -->
     <footer>
-      <div class="grid grid-cols-12 py-16 px-8">
+      <div class="grid grid-cols-12 py-16 px-8 md:px-16">
         <div class="col-span-12 md:col-span-6 lg:col-span-3 md:px-4 mt-4">
           <img
             class="w-[105px]"

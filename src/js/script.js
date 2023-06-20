@@ -18,6 +18,15 @@ openNav.addEventListener("click", function () {
   });
 });
 
+//Mouse Movement Hero Animation
+const hero = document.querySelector("#hero");
+hero.addEventListener("mousemove", function (event) {
+  const x = event.clientX;
+  const y = event.clientY;
+
+  console.log(x, y);
+});
+
 //Filter Menu Manupulation
 const openFilter = document.querySelector("#open-filter");
 const closeFilter = document.querySelector("#close-filter");
@@ -41,26 +50,38 @@ let mixer = mixitup(cardsGallery, {
   selectors: {
     target: ".mix",
   },
+  controls: {
+    toggleLogic: "or",
+  },
 });
-
-let filterButton = document.querySelectorAll(".filter");
-filterButton.forEach(function (button) {
-  button.addEventListener("click", function () {
-    let filterValue = button.getAttribute("data-filter");
-    mixer.filter(filterValue);
-  });
-});
-
-console.log(cardsGallery.childNodes[1].childNodes[3].textContent);
 
 //Search Filter
 const searchFilter = document.querySelector("#search-filter");
 searchFilter.addEventListener("keyup", function (event) {
+  let matchingElements = [];
   const searchTerm = searchFilter.value.trim().toLowerCase();
-  console.log(searchTerm);
   if (searchTerm !== "") {
-    mixer.filter(function (item) {});
+    var mixElements = document.querySelectorAll(".mix");
+
+    mixElements.forEach(function (element) {
+      var title = element.querySelector("h3").textContent.toLowerCase();
+
+      // Add item to be filtered out if input text matches items inside the title
+      if (title.includes(searchTerm)) {
+        matchingElements.push(element);
+      } else {
+        // Remove any previously matched item
+        var index = matchingElements.indexOf(element);
+        if (index > -1) {
+          matchingElements.splice(index, 1);
+        }
+      }
+    });
+
+    console.log(matchingElements);
+    mixer.filter(matchingElements);
   } else {
+    // Reset the filter to show all items if input is empty
     mixer.filter("all");
   }
 });
