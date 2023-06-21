@@ -132,11 +132,39 @@
                 <div
                   class="category-select flex items-center border relative gap-1 border-slate-300 cursor-pointer rounded-tl-full rounded-bl-full px-6 group"
                 >
-                  <span class="text-sm inline-block py-2.5 mr-2 text-gray"
+                  <span
+                    id="select-category"
+                    class="text-sm w-32 inline-block py-2.5 mr-2 text-gray"
                     >Category</span
                   >
 
                   <i class="fa fa-angle-down" aria-hidden="true"></i>
+
+                  <ul
+                    class="options hidden absolute top-12 left-0 bg-white w-44 h-auto shadow shadow-slate-300 z-20"
+                  >
+                    <li class="py-2 list-options hover:bg-neutral-200 px-4">
+                      Category
+                    </li>
+                    <li class="py-2 list-options hover:bg-neutral-200 px-4">
+                      Art(3)
+                    </li>
+                    <li class="py-2 list-options hover:bg-neutral-200 px-4">
+                      Domains(3)
+                    </li>
+                    <li class="py-2 list-options hover:bg-neutral-200 px-4">
+                      Sports(3)
+                    </li>
+                    <li class="py-2 list-options hover:bg-neutral-200 px-4">
+                      Trading Cards(2)
+                    </li>
+                    <li class="py-2 list-options hover:bg-neutral-200 px-4">
+                      Utility(3)
+                    </li>
+                    <li class="py-2 list-options hover:bg-neutral-200 px-4">
+                      Virtual Worlds(2)
+                    </li>
+                  </ul>
                 </div>
 
                 <div
@@ -242,7 +270,12 @@
         id="hero"
         class="flex flex-col md:flex-row h-screen my-10 md:my-20 overflow-x-hidden group relative"
       >
-        <div class="w-full md:w-1/2 px-6 md:px-10 xl:px-20 xl:ml-20 md:py-16">
+        <div
+          class="hero-temp-bg absolute top-0 left-0 right-0 bottom-0 bg-gray -z-20"
+        ></div>
+        <div
+          class="hero-text-group w-full md:w-1/2 px-6 md:px-10 xl:px-20 xl:ml-20 md:py-16"
+        >
           <h1 class="text-3xl md:text-5xl xl:text-6xl font-bold text-black">
             The best NFT Marketplace for your needs
           </h1>
@@ -259,58 +292,58 @@
         </div>
 
         <div
-          class="flex justify-center md:justify-start gap-2 mt-10 md:mt-0 px-6 md:px-20 md:gap-5 xl:gap-10"
+          class="hero-img-group flex justify-center md:justify-start gap-2 mt-10 md:mt-0 px-6 md:px-20 md:gap-5 xl:gap-10"
         >
           <div
             class="w-full md:mt-20 sm:w-1/2 flex flex-col gap-2 md:gap-5 xl:gap-10"
           >
             <div class="relative">
               <img
-                class="max-w-full max-h-full md:w-48 md:h-48 lg:w-60 lg:h-60 xl:w-72 xl:h-72 rounded-t-5xl"
+                class="max-w-full max-h-full md:w-48 md:h-48 lg:w-60 lg:h-60 xl:w-72 xl:h-72 md:group-hover:translate-x-5 lg:group-hover:translate-x-10 duration-1000 rounded-t-5xl"
                 src="./img/bg/nft-bg-1.jpg"
                 alt=""
               />
               <div
-                class="absolute top-0 left-0 max-w-full max-h-full md:w-48 md:h-48 lg:w-60 lg:h-60 xl:w-72 xl:h-72 hidden md:block rounded-t-5xl bg-cyan-100 group-hover:-translate-x-10 translate-y-10 -z-10 transition-all duration-1000"
+                class="absolute top-0 left-0 max-w-full max-h-full md:w-48 md:h-48 lg:w-60 lg:h-60 xl:w-72 xl:h-72 hidden md:block rounded-t-5xl bg-cyan-100 hero-shadow md:group-hover:-translate-x-5 lg:group-hover:-translate-x-10 translate-y-10 -z-10 transition-all duration-1000"
               ></div>
             </div>
             <div class="relative">
               <img
-                class="max-w-full max-h-full md:w-48 md:h-48 lg:w-60 lg:h-60 xl:w-72 xl:h-72 rounded-b-5xl"
+                class="max-w-full max-h-full md:w-48 md:h-48 lg:w-60 lg:h-60 xl:w-72 xl:h-72 md:group-hover:translate-x-5 lg:group-hover:translate-x-10 duration-1000 rounded-b-5xl"
                 src="./img/bg/nft-bg-3.jpg"
                 alt=""
               />
               <div
-                class="absolute top-0 left-0 max-w-full max-h-full md:w-48 md:h-48 lg:w-60 lg:h-60 xl:w-72 xl:h-72 hidden md:block rounded-b-5xl group-hover:-translate-x-10 translate-y-10 bg-sky-100 -z-10 transition-all duration-1000"
+                class="absolute top-0 left-0 max-w-full max-h-full md:w-48 md:h-48 lg:w-60 lg:h-60 xl:w-72 xl:h-72 hidden md:block rounded-b-5xl hero-shadow md:group-hover:-translate-x-5 lg:group-hover:-translate-x-10 translate-y-10 bg-sky-100 -z-10 transition-all duration-1000"
               ></div>
             </div>
           </div>
           <div class="w-full sm:w-1/2 flex flex-col gap-2 md:gap-5 xl:gap-10">
             <div class="relative">
               <img
-                class="max-w-full max-h-full md:w-48 md:h-48 lg:w-60 lg:h-60 xl:w-72 xl:h-72 rounded-t-5xl"
+                class="max-w-full max-h-full md:w-48 md:h-48 lg:w-60 lg:h-60 xl:w-72 xl:h-72 md:group-hover:translate-x-5 lg:group-hover:translate-x-10 duration-1000 rounded-t-5xl"
                 src="./img/bg/nft-bg-2.jpg"
                 alt=""
               />
               <div
-                class="absolute top-0 left-0 w-60 h-60 hidden md:block xl:w-72 xl:h-72 rounded-t-5xl group-hover:-translate-x-10 translate-y-10 bg-orange-100 -z-10 transition-all duration-1000"
+                class="absolute top-0 left-0 max-w-full max-h-full md:w-48 md:h-48 lg:w-60 lg:h-60 hidden md:block xl:w-72 xl:h-72 rounded-t-5xl hero-shadow md:group-hover:-translate-x-5 lg:group-hover:-translate-x-10 translate-y-10 bg-orange-100 -z-10 transition-all duration-1000"
               ></div>
             </div>
             <div class="relative">
               <img
-                class="max-w-full max-h-full md:w-48 md:h-48 lg:w-60 lg:h-60 xl:w-72 xl:h-72 rounded-b-5xl"
+                class="max-w-full max-h-full md:w-48 md:h-48 lg:w-60 lg:h-60 xl:w-72 xl:h-72 md:group-hover:translate-x-5 lg:group-hover:translate-x-10 duration-1000 rounded-b-5xl"
                 src="./img/bg/nft-bg-4.jpg"
                 alt=""
               />
               <div
-                class="absolute top-0 left-0 max-w-full max-h-full md:w-48 md:h-48 lg:w-60 lg:h-60 xl:w-72 xl:h-72 hidden md:block rounded-b-5xl group-hover:-translate-x-10 translate-y-10 bg-emerald-100 -z-10 transition-all duration-1000"
+                class="absolute top-0 left-0 max-w-full max-h-full md:w-48 md:h-48 lg:w-60 lg:h-60 xl:w-72 xl:h-72 hidden md:block rounded-b-5xl hero-shadow md:group-hover:-translate-x-5 lg:group-hover:-translate-x-10 translate-y-10 bg-emerald-100 -z-10 transition-all duration-1000"
               ></div>
             </div>
           </div>
         </div>
 
         <div
-          class="absolute bottom-0 md:bottom-40 left-1/4 -translate-x-1/4 p-6 flex flex-col items-center justify-center gap-x-10 sm:flex-row px-10 bg-neutral-400 rounded-md"
+          class="absolute bottom-0 md:bottom-32 left-1/4 -translate-x-1/4 p-6 flex flex-col items-center justify-center gap-x-10 sm:flex-row px-10 bg-neutral-400 rounded-md"
         >
           <h3 class="text-white text-center md:text-left lg:text-xl font-bold">
             Check from over 8 million NFTs on the Marketplace
@@ -328,7 +361,7 @@
       </section>
 
       <!-- Gallery section  -->
-      <section class="my-20 w-full box-shadow-sm">
+      <section class="my-20 w-full relative box-shadow-sm">
         <div class="flex items-start">
           <div
             class="w-1/5 pl-6 pr-4 bg-blue py-4 hidden lg:flex items-center justify-between z-20"
@@ -345,10 +378,17 @@
               >Close</span
             >
           </div>
-          <ul
-            class="w-full lg:w-4/5 col-span-12 bg-white box-shadow-sm flex flex-col md:flex-row items-center justify-center flex-wrap gap-x-14 py-4"
+
+          <span
+            id="filter-list-toggle"
+            class="inline-block font-bold mx-auto py-4 md:hidden"
+            >All</span
           >
-            <li>
+          <ul
+            id="filter-menu"
+            class="w-44 md:w-full absolute top-0 left-1/2 md:left-0 -translate-x-1/2 md:translate-x-0 md:relative lg:w-4/5 col-span-12 bg-white box-shadow-sm hidden md:flex flex-col md:flex-row items-center justify-center flex-wrap gap-x-14 py-4"
+          >
+            <li class="menu-list px-2 py-1">
               <a
                 class="text-neutral-800 font-bold text-sm uppercase"
                 data-filter="all"
@@ -356,7 +396,7 @@
                 >All</a
               >
             </li>
-            <li class="menu-list hidden md:block">
+            <li class="menu-list px-2 py-1">
               <a
                 class="text-neutral-800 font-bold text-sm uppercase"
                 data-filter=".art"
@@ -364,7 +404,7 @@
                 >Art</a
               >
             </li>
-            <li class="menu-list hidden md:block">
+            <li class="menu-list px-2 py-1">
               <a
                 class="text-neutral-800 font-bold text-sm uppercase"
                 href="#domain"
@@ -372,7 +412,7 @@
                 >Domain</a
               >
             </li>
-            <li class="menu-list hidden md:block">
+            <li class="menu-list px-2 py-1">
               <a
                 class="text-neutral-800 font-bold text-sm uppercase"
                 href="#sports"
@@ -380,7 +420,7 @@
                 >Sports</a
               >
             </li>
-            <li class="menu-list hidden md:block">
+            <li class="menu-list px-2 py-1">
               <a
                 class="text-neutral-800 font-bold text-sm uppercase"
                 href="#trading-cards"
@@ -388,7 +428,7 @@
                 >Trading Cards</a
               >
             </li>
-            <li class="menu-list hidden md:block">
+            <li class="menu-list px-2 py-1">
               <a
                 class="text-neutral-800 font-bold text-sm uppercase"
                 href="#utility"
@@ -396,7 +436,7 @@
                 >Utility</a
               >
             </li>
-            <li class="menu-list hidden md:block">
+            <li class="menu-list px-2 py-1">
               <a
                 class="text-neutral-800 font-bold text-sm uppercase"
                 href="#virtual-worlds"
@@ -501,7 +541,7 @@
                 <li class="relative py-2 text-sm text-gray">
                   <input
                     class="toggle"
-                    data-toggle=".buynow"
+                    data-toggle=".buy-now"
                     type="checkbox"
                     name="buynow"
                     id="buynow"
@@ -511,7 +551,7 @@
                 <li class="relative py-2 text-sm text-gray">
                   <input
                     class="toggle"
-                    data-toggle=".hasoffers"
+                    data-toggle=".has-offers"
                     type="checkbox"
                     name="hasoffers"
                     id="hasoffers"
@@ -521,7 +561,7 @@
                 <li class="relative py-2 text-sm text-gray">
                   <input
                     class="toggle"
-                    data-toggle=".onauction"
+                    data-toggle=".on-auction"
                     type="checkbox"
                     name="onauction"
                     id="onauction"
@@ -577,7 +617,7 @@
                 <li class="relative py-2 text-sm text-gray">
                   <input
                     class="toggle"
-                    data-toggle=".language"
+                    data-toggle=".languages"
                     type="checkbox"
                     name="language"
                     id="language"
@@ -604,16 +644,7 @@
                   />
                   <label for="vintage">vintage</label>
                 </li>
-                <li class="relative py-2 text-sm text-gray">
-                  <input
-                    class="toggle"
-                    data-toggle=".vocational"
-                    type="checkbox"
-                    name="vocational"
-                    id="vocational"
-                  />
-                  <label for="vocational">vocational</label>
-                </li>
+
                 <li class="relative py-2 text-sm text-gray">
                   <input
                     class="toggle"
