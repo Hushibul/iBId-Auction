@@ -463,15 +463,15 @@ body {
 }
 
 .hero-temp-bg {
-  animation: translate-right 1s ease-in-out 0s 1 normal forwards;
+  animation: translate-right 2s ease-in-out 0s 1 normal forwards;
 }
 
 .hero-text-group {
-  animation: translate-left 1s ease-in-out 0s 1 normal forwards;
+  animation: translate-left 2s ease-in-out 0s 1 normal forwards;
 }
 
 .hero-img-group {
-  animation: translate-bottom 1s ease-in-out 0s 1 normal forwards;
+  animation: translate-bottom 2s ease-in-out 0s 1 normal forwards;
 }
 
 .rounded-t-5xl {
@@ -767,6 +767,62 @@ ul.filter-list > li > input[type="checkbox"]:checked + label::before {
   top: 1rem;
 }
 
+.left-40{
+  left: 10rem;
+}
+
+.left-44{
+  left: 11rem;
+}
+
+.left-48{
+  left: 12rem;
+}
+
+.left-60{
+  left: 15rem;
+}
+
+.top-14{
+  top: 3.5rem;
+}
+
+.top-16{
+  top: 4rem;
+}
+
+.top-40{
+  top: 10rem;
+}
+
+.top-24{
+  top: 6rem;
+}
+
+.left-56{
+  left: 14rem;
+}
+
+.left-52{
+  left: 13rem;
+}
+
+.top-28{
+  top: 7rem;
+}
+
+.top-32{
+  top: 8rem;
+}
+
+.top-36{
+  top: 9rem;
+}
+
+.top-20{
+  top: 5rem;
+}
+
 .-z-10{
   z-index: -10;
 }
@@ -791,6 +847,10 @@ ul.filter-list > li > input[type="checkbox"]:checked + label::before {
   grid-column: span 12 / span 12;
 }
 
+.float-right{
+  float: right;
+}
+
 .mx-4{
   margin-left: 1rem;
   margin-right: 1rem;
@@ -809,6 +869,11 @@ ul.filter-list > li > input[type="checkbox"]:checked + label::before {
 .my-20{
   margin-top: 5rem;
   margin-bottom: 5rem;
+}
+
+.my-4{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .mb-3{
@@ -857,6 +922,10 @@ ul.filter-list > li > input[type="checkbox"]:checked + label::before {
 
 .mt-8{
   margin-top: 2rem;
+}
+
+.mt-2{
+  margin-top: 0.5rem;
 }
 
 .block{
@@ -911,6 +980,14 @@ ul.filter-list > li > input[type="checkbox"]:checked + label::before {
   height: 100vh;
 }
 
+.h-1\/3{
+  height: 33.333333%;
+}
+
+.h-96{
+  height: 24rem;
+}
+
 .max-h-full{
   max-height: 100%;
 }
@@ -959,6 +1036,18 @@ ul.filter-list > li > input[type="checkbox"]:checked + label::before {
   width: 100%;
 }
 
+.w-auto{
+  width: auto;
+}
+
+.w-96{
+  width: 24rem;
+}
+
+.w-1\/2{
+  width: 50%;
+}
+
 .max-w-\[85px\]{
   max-width: 85px;
 }
@@ -979,6 +1068,16 @@ ul.filter-list > li > input[type="checkbox"]:checked + label::before {
 
 .translate-y-10{
   --tw-translate-y: 2.5rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-translate-x-full{
+  --tw-translate-x: -100%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-x-0{
+  --tw-translate-x: 0px;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1126,6 +1225,10 @@ ul.filter-list > li > input[type="checkbox"]:checked + label::before {
   border-top-width: 1px;
 }
 
+.border-b-2{
+  border-bottom-width: 2px;
+}
+
 .border-slate-200{
   --tw-border-opacity: 1;
   border-color: rgb(226 232 240 / var(--tw-border-opacity));
@@ -1143,6 +1246,16 @@ ul.filter-list > li > input[type="checkbox"]:checked + label::before {
 .border-white{
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
+.border-blue{
+  --tw-border-opacity: 1;
+  border-color: rgb(77 121 210 / var(--tw-border-opacity));
+}
+
+.border-b-blue{
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(77 121 210 / var(--tw-border-opacity));
 }
 
 .bg-black{
@@ -1474,6 +1587,12 @@ ul.filter-list > li > input[type="checkbox"]:checked + label::before {
   transition-duration: 150ms;
 }
 
+.transition-transform{
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .duration-1000{
   transition-duration: 1000ms;
 }
@@ -1484,6 +1603,10 @@ ul.filter-list > li > input[type="checkbox"]:checked + label::before {
 
 .duration-200{
   transition-duration: 200ms;
+}
+
+.duration-300{
+  transition-duration: 300ms;
 }
 
 /* Animation  */
@@ -1586,6 +1709,11 @@ ul.filter-list > li > input[type="checkbox"]:checked + label::before {
   display: flex;
 }
 
+.group:hover .group-hover\:bg-red{
+  --tw-bg-opacity: 1;
+  background-color: rgb(240 34 34 / var(--tw-bg-opacity));
+}
+
 .group:hover .group-hover\:opacity-100{
   opacity: 1;
 }
@@ -1605,6 +1733,10 @@ ul.filter-list > li > input[type="checkbox"]:checked + label::before {
 
   .sm\:flex-row{
     flex-direction: row;
+  }
+
+  .sm\:items-center{
+    align-items: center;
   }
 }
 
@@ -1687,6 +1819,11 @@ ul.filter-list > li > input[type="checkbox"]:checked + label::before {
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
+  .md\:-translate-x-96{
+    --tw-translate-x: -24rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
   .md\:flex-row{
     flex-direction: row;
   }
@@ -1742,6 +1879,11 @@ ul.filter-list > li > input[type="checkbox"]:checked + label::before {
     padding-bottom: 1rem;
   }
 
+  .md\:py-6{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
   .md\:pr-6{
     padding-right: 1.5rem;
   }
@@ -1763,16 +1905,6 @@ ul.filter-list > li > input[type="checkbox"]:checked + label::before {
   .md\:text-lg{
     font-size: 1.125rem;
     line-height: 1.75rem;
-  }
-
-  .group:hover .md\:group-hover\:-translate-x-5{
-    --tw-translate-x: -1.25rem;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  }
-
-  .group:hover .md\:group-hover\:translate-x-5{
-    --tw-translate-x: 1.25rem;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 }
 
@@ -1866,16 +1998,6 @@ ul.filter-list > li > input[type="checkbox"]:checked + label::before {
   .lg\:text-xl{
     font-size: 1.25rem;
     line-height: 1.75rem;
-  }
-
-  .group:hover .lg\:group-hover\:-translate-x-10{
-    --tw-translate-x: -2.5rem;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  }
-
-  .group:hover .lg\:group-hover\:translate-x-10{
-    --tw-translate-x: 2.5rem;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 }
 

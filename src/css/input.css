@@ -48,15 +48,15 @@
   }
 
   .hero-temp-bg {
-    animation: translate-right 1s ease-in-out 0s 1 normal forwards;
+    animation: translate-right 2s ease-in-out 0s 1 normal forwards;
   }
 
   .hero-text-group {
-    animation: translate-left 1s ease-in-out 0s 1 normal forwards;
+    animation: translate-left 2s ease-in-out 0s 1 normal forwards;
   }
 
   .hero-img-group {
-    animation: translate-bottom 1s ease-in-out 0s 1 normal forwards;
+    animation: translate-bottom 2s ease-in-out 0s 1 normal forwards;
   }
 
   .rounded-t-5xl {

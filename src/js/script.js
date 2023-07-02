@@ -4,7 +4,7 @@ const moblieNav = document.querySelector("#mobile-nav");
 const body = document.querySelector("body");
 
 openNav.addEventListener("click", function () {
-  moblieNav.classList.replace("hidden", "block");
+  moblieNav.classList.replace("-translate-x-full", "translate-x-0");
 
   const closeMenu = document.createElement("div");
   closeMenu.setAttribute(
@@ -13,7 +13,7 @@ openNav.addEventListener("click", function () {
   );
   body.appendChild(closeMenu);
   closeMenu.addEventListener("click", function () {
-    moblieNav.classList.replace("block", "hidden");
+    moblieNav.classList.replace("translate-x-0", "-translate-x-full");
     closeMenu.setAttribute("class", "hidden");
   });
 });
@@ -31,7 +31,28 @@ selectCategory.addEventListener("click", function () {
       selectCategory.textContent = element.textContent;
       selectOptions.classList.add("hidden");
     });
+    if (
+      selectCategory.textContent.toLowerCase() ===
+      element.textContent.toLowerCase()
+    ) {
+      element.classList.add("font-bold");
+    } else {
+      element.classList.remove("font-bold");
+    }
   });
+});
+
+//Home Drop-down
+const home = document.querySelector("#home");
+const homeList = document.querySelector("#home-dropdown");
+home.addEventListener("click", function (event) {
+  if (homeList.classList.value.includes("hidden")) {
+    homeList.classList.replace("hidden", "flex");
+    home.classList.replace("fa-angle-down", "fa-angle-up");
+  } else {
+    homeList.classList.replace("flex", "hidden");
+    home.classList.replace("fa-angle-up", "fa-angle-down");
+  }
 });
 
 //Mouse Movement Hero Animation
@@ -42,11 +63,23 @@ hero.addEventListener("mousemove", function (event) {
 
   const innerWidth = window.innerWidth;
 
-  console.log("hero", hero.offsetLeft, hero.offsetTop);
+  // console.log("hero", hero.offsetLeft, hero.offsetTop);
 
-  heroShadow.forEach(function (element) {
-    console.log(element.offsetTop, element.offsetLeft);
-  });
+  // heroShadow.forEach(function (element) {
+  //   console.log(element.offsetTop, element.offsetLeft);
+  // });
+  // console.log(x);
+
+  for (let i = 1; i < 50; i++) {
+    if (Math.ceil(x) === Math.ceil(innerWidth / i)) {
+      heroShadow.forEach(function (element) {
+        // console.log(element);
+        element.style.transform = `translateX(${-i * 1.5}px) translateY(40px)`;
+        element.style.transition = "all 2s";
+        console.log(element);
+      });
+    }
+  }
 });
 
 //Filter Menu Manupulation
@@ -77,7 +110,6 @@ filterToggle.addEventListener("click", function () {
   filterElement.forEach(function (element) {
     element.addEventListener("click", function () {
       filterToggle.textContent = element.textContent;
-
       filterMenu.classList.replace("flex", "hidden");
     });
   });
@@ -116,7 +148,6 @@ searchFilter.addEventListener("keyup", function (event) {
       }
     });
 
-    console.log(matchingElements);
     mixer.filter(matchingElements);
   } else {
     // Reset the filter to show all items if input is empty
